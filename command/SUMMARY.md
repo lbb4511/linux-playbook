@@ -1,7 +1,7 @@
 - [Linux 命令](command/)
 - [一些系统命令](command/00.md)
 
-- [文件目录操作]
+- **文件目录操作**
   - [ls](command/01.md)
   - [cd](command/02.md)
   - [pwd](command/03.md)
@@ -17,7 +17,8 @@
   - [less](command/13.md)
   - [head](command/14.md)
   - [tail](command/15.md)
-- [文件操作]
+
+- **文件操作**
   - [which](command/16.md)
   - [whereis](command/17.md)
   - [locate](command/18.md)
@@ -27,22 +28,26 @@
   - [find 的参数详解](command/22.md)
   - [文件压缩解压](command/23.md)
   - [ln 链接](command/24.md)
-- [linux 文件权限设置]
+
+- **Linux 文件权限设置**
   - [用户和组](command/26.md)
   - [linux 权限操作](command/27.md)
   - [linux 权限操作](command/28.md)
   - [chgrp](command/29.md)
   - [chown](command/30.md)
-- [磁盘存储相关]
+
+- **磁盘存储相关**
   - [df](command/33.md)
   - [du](command/34.md)
-- [性能监控和优化]
+
+- **性能监控和优化**
   - [top](command/44.md)
   - [free](command/45.md)
   - [vmstat](command/46.md)
   - [iostat](command/47.md)
   - [lsof](command/51.md)
-- [网络]
+
+- **网络**
   - [ifconfig](command/52.md)
   - [route](command/53.md)
   - [ping](command/54.md)
@@ -50,7 +55,8 @@
   - [netstat](command/56.md)
   - [ss](command/57.md)
   - [telnet](command/58.md)
-- [其他]
+
+- **其他**
   - [diff](command/36.md)
   - [date](command/37.md)
   - [cal](command/38.md)

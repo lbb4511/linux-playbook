@@ -11,8 +11,5 @@
 7. ~~《鸟哥的 linux 私房菜》~~
 8. [Arch 维基](https://wiki.archlinux.org/)
 9. [Linux-Wiki](http://linux-wiki.cn/wiki/首页)
-10. Report any translation bugs to <https://translationproject.org/team/>
-11. Full documentation <https://www.gnu.org/software/coreutils/chmod>
-12. 或者在本地使用：info '(coreutils) chmod invocation'
-13. 其他互联网资料，google，baidu 等搜索引擎
-14. GNU coreutils 在线帮助：<https://www.gnu.org/software/coreutils/>
+10. [GNU coreutils 在线帮助](https://www.gnu.org/software/coreutils/)
+11. 其他互联网资料，google，baidu 等搜索引擎

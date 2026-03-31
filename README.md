@@ -1,4 +1,4 @@
-<img src="_img/logo.svg" width="199.43px" height="234.2px" ></div>
+<img src="_img/logo.svg" width="199.43px" height="234.2px">
 
 # linux 学习与运用
 
