@@ -19,6 +19,7 @@ window.$docsify = {
       '/docker/',
       '/file/',
       '/git/',
+      '/nodes/',
       '/operation-and-maintenance/',
       '/software/'
     ],
