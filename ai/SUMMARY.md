@@ -1,0 +1,7 @@
+- [AI](ai/)
+  - [AI 开发概述](ai/01.md)
+  - [opencode 命令行 AI 助手](ai/02.md)
+  - [本地大模型部署](ai/03.md)
+  - [Python AI 开发环境](ai/04.md)
+  - [AI 辅助编程](ai/05.md)
+  - [常用 AI 工具](ai/06.md)

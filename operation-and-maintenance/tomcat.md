@@ -18,10 +18,6 @@ Tomcat 是提供一个支持 Servlet 和 JSP 运行的容器。Servlet 和 JSP �
 
 而且为了提高性能，可以一台 apache 连接多台 tomcat 实现负载平衡。
 
-# 表签
-tags: Web容器
----
-
 ## Tomcat 8 安装
 
 - Tomcat 8 安装

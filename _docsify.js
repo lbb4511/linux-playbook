@@ -12,9 +12,13 @@ window.$docsify = {
   search: {
     maxAge: 86400000,
     paths: [
+      '/ai/',
       '/application/',
       '/command/',
+      '/development/',
+      '/docker/',
       '/file/',
+      '/git/',
       '/operation-and-maintenance/',
       '/software/'
     ],

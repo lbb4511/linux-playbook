@@ -223,13 +223,9 @@ Ctrl+Alt+C: Copy Markup as HTML.
 
 ## 项目管理
 
-1. 打开一个文件夹：
+1. 打开一个文件夹
 
-   ![打开一个文件夹](../img/2.png)
-
-2. 项目另存为：
-
-   ![项目另存为](../img/3.png)
+2. 项目另存为
 
 3. 设置快捷键
 
@@ -335,7 +331,6 @@ Ctrl+Alt+C: Copy Markup as HTML.
 - `Ctrl+O`(Windows 用`alt+O`)在 SublimeText 里打开链接文件
 - SublimeText 3 的链接可以指向目录,打开指向目录的链接将会把此目录加入到侧边栏的工程里,例如: .\..\PlainTasks\
 - 其它创建文件链接的语法格式:
-  ![](../../img/sub.png)
   _注:path 为文件路径_
 
 ### 归档:

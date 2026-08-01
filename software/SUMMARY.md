@@ -14,8 +14,6 @@
 - [JetBrains](software/jetbrains.md)
 - [Sublime Text](software/sublimetext.md)
 - [VSCode](software/vscode.md)
-- [Trello](software/trello.md)
-- [文件夹实时同步](software/freefilesync.md)
 - [用 SecureCRT 来上传和下载文件](software/SecureCRT.md)
 - [代理服务器](software/nginx.md)
 - [Tomcat](software/tomcat.md)

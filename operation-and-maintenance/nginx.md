@@ -449,7 +449,6 @@ http {
 ### 配置 HTTPS 服务（SSL 证书配置）
 
 - 免费申请 SSL 证书渠道 - 教程：<https://www.wn789.com/4394.html> - SSL For Free：<https://www.sslforfree.com> - 配置要点其实就是下面该图：
-- ![免费申请 SSL 证书渠道](images/Nginx-SSL-a-1.jpg)
 - 一般你会下载下面两个文件：`certificate.crt`，`private.key`
 - 如果你需要把 crt 和 key 的证书转换成 keystore（如果你有这个需求的话）
 - 从 key 和 crt 生成 pkcs12 格式的 keystore，生成过程会让人你输入密码，这个密码下面会用到，我这里假设输入 123456 - `openssl pkcs12 -export -in certificate.crt -inkey private.key -out youmeek.p12 -name youmeek -CAfile certificate.crt -caname -chain` - `keytool -importkeystore -v -srckeystore youmeek.p12 -srcstoretype pkcs12 -srcstorepass 123456 -destkeystore youmeek.keystore -deststoretype jks -deststorepass 123456`
@@ -657,14 +656,14 @@ large_client_header_buffers 2 1k;
 
 - 软件版本： - Nginx：**1.8.1** - Keepalived：**1.2.20** - JDK：**8u72** - Tomcat：**8.0.32**
 - 部署环境（下文中以第几台来代表这些主机）： - 虚拟 IP（VIP）：192.168.1.50 - 第一台主机：Nginx 1 + Keepalived 1 == 192.168.1.120（Master） - 第二台主机：Nginx 2 + Keepalived 2 == 192.168.1.121（Backup） - 第三台主机：Tomcat 1 == 192.168.1.122（Web 1） - 第四台主机：Tomcat 2 == 192.168.1.123（Web 2）
-- 所有机子进行时间校准：[NTP（Network Time Protocol）介绍](NTP.md)
-- 第三、第四台主机部署： - JDK 的安装：[JDK 安装](JDK-Install.md) - Tomcat 的安装：[Tomcat 安装和配置、优化](Tomcat-Install-And-Settings.md)
+- 所有机子进行时间校准：NTP（Network Time Protocol）介绍
+- 第三、第四台主机部署： - JDK 的安装：JDK 安装 - Tomcat 的安装：Tomcat 安装和配置、优化
 - 第一、二台主机部署（两台部署内容一样）： - Nginx 的安装：[Nginx 安装和配置](./) - 添加虚拟 IP： - 复制一个网卡信息：`sudo cp /etc/sysconfig/network-scripts/ifcfg-eth0 /etc/sysconfig/network-scripts/ifcfg-eth0:0` - 编辑配置文件：`sudo vim /etc/sysconfig/network-scripts/ifcfg-eth0:0` - 修改内容为如下信息：
   `nginx DEVICE=eth0:0 >>> 这个需要修改 TYPE=Ethernet UUID=8ddbb256-caab-4ddf-8e9a-6527b4ac5a26 ONBOOT=yes NM_CONTROLLED=yes BOOTPROTO=none IPADDR=192.168.1.50 >>> 这个需要修改 PREFIX=24 GATEWAY=192.168.1.1 DNS1=101.226.4.6 DEFROUTE=yes IPV4_FAILURE_FATAL=yes IPV6INIT=no NAME="System eth0:0" >>> 这个需要修改 HWADDR=00:0c:29:f4:17:db LAST_CONNECT=1460213205` - 重启网卡服务：`service network restart` - 如果你要绑定更多虚拟 IP，则多复制几个网卡配置出来，命名如下：ifcfg-eth0:0，ifcfg-eth0:1，ifcfg-eth0:2 ...... - Keepalived 开始安装 - 安装依赖：`sudo yum install -y gcc openssl-devel popt-devel` - 解压包：`cd /opt/setups/ ; tar zxvf keepalived-1.2.20.tar.gz` - 编译：`cd /opt/setups/keepalived-1.2.20 ; ./configure --prefix=/usr/program/keepalived` - 编译安装：`make && make install` - Keepalived 设置服务和随机启动 - 复制配置文件到启动脚本目录：`cp /usr/program/keepalived/etc/rc.d/init.d/keepalived /etc/init.d/keepalived` - 增加权限：`chmod +x /etc/init.d/keepalived` - 编辑配置文件：`vim /etc/init.d/keepalived`
   `nginx 把 15 行的：. /etc/sysconfig/keepalived，改为： . /usr/program/keepalived/etc/sysconfig/keepalived（注意：前面有一个点和空格需要注意）` - 添加环境变量：`vim /etc/profile`
   `nginx # Keepalived 配置 KEEPALIVED_HOME=/usr/program/keepalived PATH=$PATH:$KEEPALIVED_HOME/sbin export KEEPALIVED_HOME export PATH` - 刷新环境变量：`source /etc/profile` - 检测环境变量：`keepalived -v` - `ln -s /usr/program/keepalived/sbin/keepalived /usr/sbin/` - `vim /usr/program/keepalived/etc/sysconfig/keepalived`
   `nginx 把 14 行的：KEEPALIVED_OPTIONS="-D"，改为： KEEPALIVED_OPTIONS="-D -f /usr/program/keepalived/etc/keepalived/keepalived.conf"` - 加入随机启动：`chkconfig keepalived on`
-- 第一、二台主机配置（两台在 Keepalived 配置上稍微有不一样）： - 健康监测脚本（我个人放在：/opt/bash 目录下）：[nginx_check.sh](Keepalived-Settings/nginx_check.sh) - 健康监测脚本添加执行权限：`chmod 755 /opt/bash/nginx_check.sh` - 运行监测脚本，看下是否有问题：`sh /opt/bash/nginx_check.sh`，如果没有报错，则表示改脚本没有问题 - 这个脚本很重要，如果脚本没法用，在启用 Keepalived 的时候可能会报：`Keepalived_vrrp[5684]: pid 5959 exited with status 1` - nginx 配置（两台一样配置）：
+- 第一、二台主机配置（两台在 Keepalived 配置上稍微有不一样）： - 健康监测脚本（我个人放在：/opt/bash 目录下）：nginx_check.sh - 健康监测脚本添加执行权限：`chmod 755 /opt/bash/nginx_check.sh` - 运行监测脚本，看下是否有问题：`sh /opt/bash/nginx_check.sh`，如果没有报错，则表示改脚本没有问题 - 这个脚本很重要，如果脚本没法用，在启用 Keepalived 的时候可能会报：`Keepalived_vrrp[5684]: pid 5959 exited with status 1` - nginx 配置（两台一样配置）：
   ``` nginx
   worker_processes 1;
   events {

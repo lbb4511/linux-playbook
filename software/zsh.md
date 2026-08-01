@@ -48,7 +48,6 @@ zsh 是 shell 语言类型，兼容 bash，提供强大的命令行功能，比�
 - oh-my-zsh 的插件列表介绍（太长了，用源码不精准地统计下有 149 个）：<https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins>
 - 我们看下安装 oh-my-zsh 的时候自带有多少个插件：`ls -l /root/.oh-my-zsh/plugins |grep "^d"|wc -l`，我这边得到的结果是：211
 - 编辑配置文件：`vim /root/.zshrc`，找到下图的地方，怎么安装，原作者注释写得很清楚了，别装太多了，默认 git 是安装的。
-  - ![oh-my-zsh 安装](images/Zsh-c-1.jpg)
 - 插件推荐：
   - `wd`
     - 简单地讲就是给指定目录映射一个全局的名字，以后方便直接跳转到这个目录，比如：
@@ -84,7 +83,6 @@ zsh 是 shell 语言类型，兼容 bash，提供强大的命令行功能，比�
   - `avit`
   - `blinks`
 - 编辑配置文件：`vim /root/.zshrc`，找到下图的地方，怎么安装，原作者注释写得很清楚了，如果你没特别的喜欢那就选择随机吧。
-  - ![oh-my-zsh 安装](images/Zsh-d-1.jpg)
 - 配置好新主题需要重新连接 shell 才能看到效果
 
 ### 一些人性化功能
