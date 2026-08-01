@@ -11,7 +11,5 @@ AI 相关开发笔记，涵盖大模型本地部署、命令行 AI 工具、AI �
 - [AI 辅助编程](ai/05.md)
 - [常用 AI 工具](ai/06.md)
 
-## 参考
-
 - [openopendock](https://opencode.ai)
 - [Ollama](https://ollama.com/)

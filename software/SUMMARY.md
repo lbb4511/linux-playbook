@@ -6,6 +6,7 @@
 - [FTP](software/06.md)
 - [SSH](software/08.md)
 - [IRC](software/09.md)
+- [wget](software/10.md)
 - [zsh](software/zsh.md)
 - [tmux](software/tmux.md)
 

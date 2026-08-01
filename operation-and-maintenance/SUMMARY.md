@@ -1,18 +1,18 @@
 - [运维](operation-and-maintenance/)
-- [Oracle](operation-and-maintenance/oracle.md)
-- [MySQL](operation-and-maintenance/mysql.md)
-- [Microsoft SQL Server](operation-and-maintenance/msqls.md)
-- [PostgreSQL](operation-and-maintenance/postgresql.md)
-- [MongoDB](operation-and-maintenance/mongodb.md)
-- [Redis](operation-and-maintenance/redis.md)
 
----
+- **数据库**
+  - [Oracle](operation-and-maintenance/database/oracle.md)
+  - [MySQL](operation-and-maintenance/database/mysql.md)
+  - [Microsoft SQL Server](operation-and-maintenance/database/msqls.md)
+  - [PostgreSQL](operation-and-maintenance/database/postgresql.md)
+  - [MongoDB](operation-and-maintenance/database/mongodb.md)
+  - [Redis](operation-and-maintenance/database/redis.md)
 
-- [JBoss](operation-and-maintenance/jboss.md)
-- [Apache HTTP Server](operation-and-maintenance/apache.md)
-- [Tomcat](operation-and-maintenance/tomcat.md)
-- [Internet Information Services](operation-and-maintenance/iis.md)
-- [WebSphere](operation-and-maintenance/web-sphere.md)
-- [WebLogic](operation-and-maintenance/web-logic.md)
-- [Jetty](operation-and-maintenance/jetty.md)
-- [Nginx](operation-and-maintenance/nginx.md)
+- **Web/应用服务器**
+  - [JBoss](operation-and-maintenance/web-server/jboss.md)
+  - [Apache HTTP Server](operation-and-maintenance/web-server/apache.md)
+  - [Tomcat](operation-and-maintenance/web-server/tomcat.md)
+  - [WebSphere](operation-and-maintenance/web-server/web-sphere.md)
+  - [WebLogic](operation-and-maintenance/web-server/web-logic.md)
+  - [Jetty](operation-and-maintenance/web-server/jetty.md)
+  - [Nginx](operation-and-maintenance/web-server/nginx.md)
