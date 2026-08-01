@@ -6,6 +6,8 @@ window.$docsify = {
   subMaxLevel: 2,
   coverpage: "README.md",
   onlyCover: true,
+  auto2top: true,
+  themeColor: '#42b983',
   loadSidebar: "SUMMARY.md",
   search: {
     maxAge: 86400000,
